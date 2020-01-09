@@ -94,10 +94,10 @@ var SsmlFormatterBase = /** @class */ (function (_super) {
         return lines;
     };
     SsmlFormatterBase.prototype.addSpeakTag = function (ast, newLine, newLineAfterEnd, attr, lines) {
-        lines.push(this.startTag('speak', attr, newLine));
+        // lines.push(this.startTag('speak', attr, newLine));
         this.processAst(ast, lines);
         this.addSectionEndTag(lines);
-        lines.push(this.endTag('speak', newLine));
+        // lines.push(this.endTag('speak', newLine));
         if (newLineAfterEnd) {
             lines.push('\n');
         }

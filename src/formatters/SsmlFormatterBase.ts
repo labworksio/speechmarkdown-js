@@ -94,13 +94,13 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   }
 
   protected addSpeakTag(ast: any, newLine: boolean, newLineAfterEnd: boolean, attr: any, lines: string[]): string[] {
-    lines.push(this.startTag('speak', attr, newLine));
+    // lines.push(this.startTag('speak', attr, newLine));
 
     this.processAst(ast, lines);
 
     this.addSectionEndTag(lines);
 
-    lines.push(this.endTag('speak', newLine));
+    // lines.push(this.endTag('speak', newLine));
 
     if (newLineAfterEnd) {
       lines.push('\n');
