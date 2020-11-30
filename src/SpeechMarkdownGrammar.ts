@@ -40,11 +40,11 @@ export function speechMarkdownGrammar(myna: any): any {
     this.plainTextPhone = m.seq(m.parenthesized(m.digits), plainTextChoice.oneOrMore).ast;
 
     // Break
-    this.timeUnit = m.choice('s','ms').ast;
+    this.timeUnit = m.choice('s', 'ms').ast;
     this.fraction = m.seq('.', m.digit.zeroOrMore);
     this.number = m.seq(m.integer, this.fraction.opt).ast;
     this.time = m.seq(this.number, this.timeUnit).ast;
-    this.shortBreak = m.seq('[', this.time , ']').ast;
+    this.shortBreak = m.seq('[', this.time, ']').ast;
     // this.break = m.seq('[break:', this.time , ']').ast;
 
     // this.string = m.doubleQuoted(this.quoteChar.zeroOrMore).ast;
